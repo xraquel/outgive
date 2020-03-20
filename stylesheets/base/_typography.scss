@@ -1,0 +1,66 @@
+//main: ../main.scss
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $font-mplus;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: $font-mplus;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-family: $font-mplus;
+  font-weight: 400;
+  color: $brand-color;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  color: $title-color;
+  line-height: 128%;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 67px;
+  color: $black;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 40px;
+
+  color: #30233D;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: justify;
+}
+
+.small-title {
+  display: block;
+  font-family: $font-mplus;
+  font-weight: 700;
+  font-size: 12.6px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  color: $yellow;
+}
+
+.font-bold {
+  font-weight: 600;
+  color: $black;
+}

@@ -1,0 +1,15 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@include font-face($font-mplus, $base-url + 'fonts/', 'Mplus1p-Black', 'Mplus1p-Black', 800);
+@include font-face($font-mplus, $base-url + 'fonts/', 'Mplus1p-ExtraBold', 'Mplus1p-ExtraBold', 700);
+@include font-face($font-mplus, $base-url + 'fonts/', 'Mplus1p-Bold', 'Mplus1p-Bold', 600);
+@include font-face($font-mplus, $base-url + 'fonts/', 'Mplus1p-Medium', 'Mplus1p-Medium', 500);
+@include font-face($font-mplus, $base-url + 'fonts/', 'Mplus1p-Regular', 'Mplus1p-Regular', 400);
+@include font-face($font-mplus, $base-url + 'fonts/', 'Mplus1p-Light', 'Mplus1p-Light', 300);
+@include font-face($font-mplus, $base-url + 'fonts/', 'Mplus1p-Thin', 'Mplus1p-Thin', 200);
+
+@include font-face($font-muli-bold, $base-url + 'fonts/', 'Muli-Bold', 'Muli-Bold', 600);

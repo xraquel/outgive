@@ -1,0 +1,124 @@
+.custom-header {
+  height: 99px;
+  background-color: $brand-color;
+  transition: all 0.3s ease;
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+    width: 217px;
+
+    transition: width 0.3s ease;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .nav-item {
+    position: relative;
+    margin-right: 60px;
+
+    .nav-link {
+      padding: 5px 0;
+      font-family: $font-mplus;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: $white;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+
+      &:hover {
+        color: $yellow;
+      }
+
+      &:focus {
+        color: $white;
+      }
+    }
+
+    &.active {
+      .nav-link {  
+        color: $yellow;
+      }
+    }
+
+    &:last-child() {
+      margin-right: 0;
+    }
+  }
+
+  &.sticky-top {
+    position: sticky;
+    padding: 5px 15px;
+    height: 70px;
+    @include boxshadow(0 8px 20px -8px rgba($black,.5));
+
+    .nav-item {
+      .nav-link {
+        font-size: 12px;
+      }
+    }
+
+    .btn {
+      padding: 0 30px;
+      height: 40px;
+
+      font-size: 12px;
+    }
+  }
+
+  @include respond-to(lg-down) {
+    .container {
+      max-width: 930px;
+    }
+    
+    .navbar-nav {
+      margin-left: 7%;
+    }
+  }
+
+  @include respond-to(md-down) {
+    padding: 5px 15px;
+
+    .container {
+      max-width: 100%;
+    }
+    
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    .navbar-brand {
+      margin: 0;
+    }
+
+    &.sticky-top {
+      padding: 5px 15px;
+      height: unset;
+    }
+
+    .navbar {
+      &-toggler {
+        border: none;
+      }
+
+      &-collapse {
+        padding-top: 10px;
+      }
+    }
+
+    .nav-item {
+      margin: 3px 0;
+
+      .nav-link {
+        padding: 8px 0;
+        text-align: center;
+      }
+    }
+  }
+}

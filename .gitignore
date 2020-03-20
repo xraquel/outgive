@@ -1,0 +1,5 @@
+node_modules/
+stylesheets/main.min.css/
+javascript/main.min.js/
+
+package-lock.json
