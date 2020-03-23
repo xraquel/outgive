@@ -6,14 +6,15 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
+var reload = browserSync.reload;
 
 gulp.task('serve', ['sass', 'transpuglify'], function() {
 	browserSync.init({
 		server: './'
-	});
+  });
 	gulp.watch('./stylesheets/**/*.scss', ['sass']);
 	gulp.watch('./javascripts/**/*.js', ['transpuglify']);
-	gulp.watch('./*.html').on('change', browserSync.reload);
+	gulp.watch('./*.html').on('change', reload);
 });
 
 gulp.task('sass', function() {
