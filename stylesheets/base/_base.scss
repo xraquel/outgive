@@ -86,3 +86,29 @@ input[type="text"] {
     }
   }
 }
+
+[data-toggle="collapse"] {
+  &[aria-expanded="true"] .is-collapsed {
+    display: none;
+  }
+  &[aria-expanded="false"] .not-collapsed  {
+    display: none;
+  }
+}
+
+.toggle-more {
+  display: block;
+
+  margin-top: 45px;
+  
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $white;
+  cursor: pointer;
+  
+  @include on-event() {
+    color: $yellow;
+  }
+}
