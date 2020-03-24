@@ -31,6 +31,10 @@ footer {
       a {
         font-size: 18px;
         color: $french-gray;
+
+        @include on-event() {
+          color: $brand-color;
+        }
       }
 
       &:not(:last-child) {
