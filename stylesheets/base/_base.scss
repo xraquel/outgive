@@ -21,8 +21,7 @@ a {
 
 .btn,
 a {
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
+  @include transition(all 0.2s ease-in-out);
   cursor: pointer;
   
   @include on-event {
@@ -65,7 +64,8 @@ input[type="text"] {
   height: 45px;
   
   font-family: $font-mplus;
-  font-weight: 800;
+  // font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
 
   border-radius: 36px;
@@ -97,9 +97,9 @@ input[type="text"] {
 }
 
 .toggle-more {
-  display: block;
-
-  margin-top: 45px;
+  display: inline;
+  padding: 5px 0;
+  margin: 45px auto 0;
   
   font-size: 14px;
   font-weight: 500;
@@ -108,7 +108,11 @@ input[type="text"] {
   color: $white;
   cursor: pointer;
   
+  border-bottom: 1px solid $white;
+  @include transition(all 0.2s ease-in-out);
+
   @include on-event() {
     color: $yellow;
+    border-color: $yellow;
   }
 }

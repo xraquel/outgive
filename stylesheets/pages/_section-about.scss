@@ -1,0 +1,42 @@
+.section-about {
+  position: relative;
+  padding-top: 115px;
+  padding-bottom: 82px;
+  background-color: $alabaster;
+
+  &:after {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    bottom: -18px;
+    right: 7%;
+    width: 43px;
+    height: 43px;
+    background: url($base-url+'images/icon-plus-yellow.png') no-repeat;
+  }
+
+  .about-title {
+    margin-bottom: 32px;
+  }
+
+  .about-text {
+    margin-bottom: 30px;
+    color: $text-color;
+  }
+
+  .col {
+    &-first {
+      padding-right: 45px;
+    }
+
+    &-second {
+      padding-left: 45px;
+    }
+  }
+
+  @include respond-to(xl) {
+    .container {
+      max-width: 1185px;
+    }
+  }
+}

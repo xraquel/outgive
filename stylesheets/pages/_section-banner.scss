@@ -1,0 +1,119 @@
+.section-banner {
+  position: relative;
+  height: 600px;
+
+  background-color: $white;
+  background: url($base-url + 'images/banner-outgive.png') no-repeat;
+  background-position: 100%;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+  }
+
+  .banner {
+    &-content {
+      padding: 0 20px;
+      margin-bottom: 80px;
+    }
+
+    &-title {
+      margin-bottom: 12px;
+    }
+
+    &-description {
+      margin-bottom: 40px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 32px;
+      color: $brand-color;
+    }
+
+    &-btn {
+      padding: 0 40px;
+
+      @include on-event() {
+        color: $white;
+        background-color: $brand-color;
+        border-color: $brand-color;
+      }
+    }
+  }
+
+  @include respond-to(lg-down) {
+    height: 450px;
+
+    .container {
+      max-width: 100%;
+    }
+
+    .banner-content {
+      margin-bottom: 30px;
+    }
+
+    .banner-description {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include respond-to(md-down) {
+    height: 380px;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .banner-description {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    background: 
+    linear-gradient(0deg, rgba($bunting, 0.75) 5%, rgba($yellow, 0.5) 120%),
+    url($base-url + 'images/banner-outgive.png') 60%;
+
+    background-size: cover;
+
+    .banner-description {
+      color: $white;
+    }
+  }
+
+  @include respond-to(xs) {
+    height: calc(100vh - 70px);
+
+    .banner {
+      &-content,
+      &-description {
+        padding: 0;
+
+        text-align: center;
+        
+        h1 {
+          line-height: 45px;
+        }
+      }
+
+      &-content {
+        margin: 0 auto;
+      }
+
+      &-btn {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .banner-description {
+      br {
+        display: none;
+      }
+    }
+  }
+}

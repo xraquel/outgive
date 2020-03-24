@@ -1,0 +1,60 @@
+.section-join {
+  position: relative;
+  margin-top: 103px;
+  padding: 88px 0 80px;
+  background-color: $brand-color;
+
+  &:before,
+  &:after {
+    content: '';
+    z-index: 10;
+    position: absolute;
+  }
+
+  &:before {
+    top: 200px;
+    left: -26px;
+    width: 106px;
+    height: 146px;
+    background: url($base-url+'images/img-dotted-yellow.png') no-repeat;
+  }
+
+  &:after {
+    top: 55px;
+    right: 166px;
+    width: 43px;
+    height: 43px;
+    background: url($base-url+'images/icon-plus-yellow.png') no-repeat;
+  }
+
+  .section-title,
+  .small-title {
+    color: $white;
+  }
+
+  .small-title {
+    margin-bottom: 17px;
+
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+  }
+
+  h2 {
+    margin-bottom: 18px;
+
+    font-size: 47px;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: $white;
+  }
+
+  p {
+    color: $white;
+    text-align: center;
+  }
+
+  .btn {
+    margin: 60px auto 0;
+  }
+}

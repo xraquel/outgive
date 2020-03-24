@@ -19,8 +19,16 @@
 
 // 4. Layout-related sections
 @import
-  'layout/header';
+  'layout/header',
+  'layout/footer';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/section-about',
+  'pages/section-banner',
+  'pages/section-clients',
+  'pages/section-join',
+  'pages/section-mission',
+  'pages/section-overview',
+  'pages/section-systems',
+  'pages/section-team';

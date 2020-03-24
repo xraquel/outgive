@@ -1,0 +1,83 @@
+.section-overview {
+  position: relative;
+  padding-bottom: 140px;
+
+  &:after {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    bottom: -245px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url($base-url+'images/img-dotted.png') no-repeat;
+  }
+
+  .overview-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: -73px auto 0;
+    width: 100%;
+    max-width: 1105px;
+  }
+
+  .mission {
+    &-card {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      width: 258px;
+      height: 162px;
+
+      background: $white;
+      border: 1px solid $athens-grey;
+      border-radius: 8px;
+      cursor: pointer;
+
+      @include on-event() {
+        color: $white;
+        background: $bunting;
+        border-color: $bunting;
+
+        .mission-icon {
+          filter: brightness(100);
+        }
+      }
+    }
+
+    &-icon {
+      margin-bottom: 15px;
+    }
+
+    &-title {
+      font-family: $font-muli-bold;
+      font-size: 19px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.4px;
+      color: $gray;
+    }
+  }
+
+  @include respond-to(xs) {
+    padding-bottom: 25px;
+
+    &:after {
+      display: none;
+    }
+
+    .overview-wrapper {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    .mission-card {
+      margin-bottom: 15px;
+    }
+  }
+}

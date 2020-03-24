@@ -1,0 +1,165 @@
+.section-mission {
+  position: relative;
+  padding-top: 106px;
+  padding-bottom: 82px;
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .small-title {
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  p {
+    margin-bottom: 30px;
+    color: $text-color;
+  }
+
+  .mission-holder {
+    position: relative;
+    padding-top: 28px;
+    // margin-bottom: 92px;4
+    margin-bottom: 150px;
+
+    .small-title {
+      margin-bottom: 5px;
+      font-size: 18px;
+      line-height: 37px;
+      letter-spacing: 4px;
+    }
+
+    .mission-title {
+      margin-bottom: 25px;
+    }
+
+    .mission-image {
+      position: relative;
+      margin-top: 6px;
+
+      img {
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+    .mission-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    &.container {
+      max-width: 1310px;
+
+      &.right {
+        margin-right: 0;
+        padding-right: 0;
+
+        .mission-content {
+          padding-right: 70px;
+        }
+
+        .mission-image {
+          position: relative;
+          margin-top: 6px;
+
+          img {
+            position: relative;
+            z-index: 10;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            z-index: 5;
+            right: 0;
+            bottom: -105px;
+
+            width: 80.5%;
+            height: 100%;
+
+            background: $yellow;
+          }
+
+          &:after {
+            content: '';
+            z-index: 12;
+            position: absolute;
+            bottom: -135px;
+            right: 10%;
+            width: 43px;
+            height: 43px;
+            background: url($base-url+'images/icon-plus-dark.png') no-repeat;
+          }
+        }
+
+        &:nth-of-type(4) {
+          .mission-image {
+            &:after {
+              bottom: -142px;
+              right: 73.5%;
+              width: 113px;
+              height: 122px;
+              background: url($base-url+'images/img-dotted.png') no-repeat;
+            }
+          }
+        }
+      }
+
+      &.left {
+        margin-left: 0;
+        padding-left: 0;
+
+        .mission-content {
+          padding-left: 80px;
+          // margin-top: 45px;
+        }
+
+        .mission-image {
+          &:before {
+            content: '';
+            position: absolute;
+            z-index: 5;
+            left: 0;
+            bottom: -85px;
+
+            width: 80.5%;
+            height: 100%;
+
+            background: $brand-color;
+          }
+        }
+
+        &:nth-of-type(5) {
+          &:after {
+            content: '';
+            z-index: 12;
+            position: absolute;
+            bottom: -52px;
+            right: 10px;
+            width: 43px;
+            height: 43px;
+            background: url($base-url+'images/icon-plus-yellow.png') no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1441px) {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  @include respond-to(xl) {
+    .container {
+      max-width: 1185px;
+    }
+  }
+}

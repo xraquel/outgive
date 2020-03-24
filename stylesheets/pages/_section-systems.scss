@@ -1,0 +1,51 @@
+.section-systems {
+  position: relative;
+  padding-top: 125px;
+
+  .container {
+    padding-left: 0;
+    margin-left: 0;
+
+    .row {
+      margin-left: 0;
+    }
+  }
+
+  .small-title {
+    margin-bottom: 17px;
+  }
+
+  h2 {
+    margin-bottom: 43px;
+  }
+
+  p {
+    margin-bottom: 5px;
+    color: $text-color;
+  }
+
+  .col-first {
+    padding-left: 0;
+    padding-right: 40px;
+  }
+
+  .col-second {
+    padding-left: 0;
+    padding-right: 95px;
+  }
+
+  @media (min-width: 1441px) {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    .col-second {
+      padding-left: 35px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1345px;
+    }
+  }
+}

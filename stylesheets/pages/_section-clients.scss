@@ -1,0 +1,91 @@
+.section-clients {
+  position: relative;
+  overflow: hidden;
+  padding-top: 175px;
+
+  &:before {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top: 156px;
+    right: -18px;
+    width: 106px;
+    height: 146px;
+    background: url($base-url+'images/img-dotted-yellow.png') no-repeat;
+  }
+
+  .container {
+    padding-right: 0;
+    margin-right: 0;
+
+    .row {
+      margin-right: 0;
+    }
+  }
+
+  .small-title {
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    margin-bottom: 57px;
+  }
+
+  p {
+    margin-bottom: 5px;
+    color: $text-color;
+  }
+
+  .col-first {
+    padding-right: 95px;
+  }
+
+  .col-second {
+    padding-right: 0;
+    padding-left: 40px;
+    margin-top: 18px;
+  }
+
+  .client-logos {
+    padding: 78px 40px;
+    height: 725px;
+    background-color: $brand-color;
+
+    .small-title {
+      padding-left: 88px;
+      color: $white;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-top: 65px;
+      height: 93%;
+
+      .logo-holder {
+        display: flex;
+        flex-basis: 50%;
+        align-items: center;
+        justify-content: center;
+
+        height: 90px;
+      }
+    }
+  }
+
+  @media (min-width: 1441px) {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    .col-first {
+      padding-right: 35px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1345px;
+    }
+  }
+}

@@ -1,22 +1,18 @@
 .custom-header {
   height: 99px;
-  background-color: #101940;
+  background-color: $bunting;
   transition: all 0.3s ease;
-  
+
   .navbar-nav {
     display: flex;
     align-items: center;
   }
 
   .navbar-brand {
+    padding: 0 13px;
     margin-right: 0;
-    width: 217px;
 
-    transition: width 0.3s ease;
-
-    img {
-      width: 100%;
-    }
+    @include transition(width 0.3s ease);
   }
 
   .nav-item {
@@ -42,7 +38,7 @@
     }
 
     &.active {
-      .nav-link {  
+      .nav-link {
         color: $yellow;
       }
     }
@@ -56,7 +52,7 @@
     position: sticky;
     padding: 5px 15px;
     height: 70px;
-    @include boxshadow(0 8px 20px -8px rgba($black,.5));
+    @include boxshadow(0 8px 20px -8px rgba($black, .5));
 
     .nav-item {
       .nav-link {
@@ -74,26 +70,28 @@
 
   @include respond-to(lg-down) {
     .container {
-      max-width: 930px;
+      max-width: 100%;
     }
-    
+
     .navbar-nav {
       margin-left: 7%;
     }
   }
 
   @include respond-to(md-down) {
-    padding: 5px 15px;
+    padding: 15px;
+    height: unset;
 
     .container {
       max-width: 100%;
     }
-    
+
     .navbar-nav {
       margin-left: auto;
     }
 
     .navbar-brand {
+      padding: 0;
       margin: 0;
     }
 

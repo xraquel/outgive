@@ -1,0 +1,75 @@
+
+footer {
+  padding: 95px 0 50px;
+
+  .company-address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+
+    color: $brand-color;
+
+    text-shadow: 0px 0px 5px $mercury;
+  }
+
+  .social-media-links {
+    margin-left: 75px;
+
+    .list-inline-item {
+      a {
+        font-size: 18px;
+        color: $french-gray;
+      }
+
+      &:not(:last-child) {
+        margin-right: 23px;
+      }
+    }
+  }
+
+  .footer-links {
+    margin-top: 10px;
+    margin-bottom: 95px;
+
+    .list-inline-item {
+      a {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+  
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+  
+        color: $brand-color;
+  
+        text-shadow: 0px 0px 5px $mercury;
+      }
+
+      &:not(:last-child) {
+        margin-right: 47px;
+      }
+    }
+  }
+
+  .copyright-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    text-align: right;
+    color: $light-gray;
+  }
+}
