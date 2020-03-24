@@ -2,7 +2,6 @@ $(function() {
   initResponsiveHeader();  
 
   $(window).on("load", function() {
-    initAOS();
     initNavbar();
   });
 
@@ -68,18 +67,5 @@ $(function() {
     } else {
       header.removeClass('sticky-top');
     }
-  }
-
-  function initAOS() {
-    AOS.init({
-      disable: function() {
-        var maxWidth = 768;
-        return window.innerWidth < maxWidth;
-      },
-      delay: 0.4,
-      duration: 700,
-      easing: 'ease',
-      once: true,
-    });
   }
 });

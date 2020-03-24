@@ -55,6 +55,8 @@
     }
 
     &-title {
+      padding: 0 5px;
+
       font-family: $font-muli-bold;
       font-size: 19px;
       line-height: 24px;
@@ -64,20 +66,60 @@
     }
   }
 
-  @include respond-to(xs) {
-    padding-bottom: 25px;
+  @include respond-to(lg-down) {
+    .container {
+      max-width: 95%;
+    }
 
+    .overview-wrapper {
+      max-width: 100%;
+    }
+
+    .mission-card {
+      flex-basis: calc(90% / 4);
+    }
+  }
+
+  @include respond-to(md-down) {
+    .mission-title {
+      font-size: 16px;
+    }
+  }
+
+  @include respond-to(sm-down) {
     &:after {
       display: none;
     }
 
     .overview-wrapper {
-      flex-direction: column;
-      margin: 0 auto;
+      flex-wrap: wrap;
+      max-width: 600px;
     }
 
     .mission-card {
       margin-bottom: 15px;
+      flex-basis: calc(95% / 2);
+    }
+  }
+
+  @include respond-to(xs) {
+    padding: 25px 0 10px;
+
+    .mission {
+      &-card {
+        height: 140px;
+      }
+
+      &-icon {
+        margin-bottom: 8px;
+        width: 40px;
+        height: 40px;
+      }
+
+      &-title {
+        font-size: 15px;
+        line-height: 20px;
+      }
     }
   }
 }
