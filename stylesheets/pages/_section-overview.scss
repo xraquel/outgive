@@ -39,6 +39,12 @@
       border-radius: 8px;
       cursor: pointer;
 
+      transition: all .3s ease-in;
+
+      .mission-icon {
+        transition: all .1s ease-in;
+      }
+
       @include on-event() {
         color: $white;
         background: $bunting;
@@ -67,6 +73,15 @@
   }
 
   @include respond-to(lg-down) {
+    padding-bottom: 80px;
+
+    &:after {
+      bottom: -50px;
+      width: 90px;
+      height: 100px;
+      background-size: contain;
+    }
+
     .container {
       max-width: 95%;
     }
@@ -103,7 +118,7 @@
   }
 
   @include respond-to(xs) {
-    padding: 25px 0 10px;
+    padding: 25px 0 35px;
 
     .mission {
       &-card {

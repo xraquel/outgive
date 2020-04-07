@@ -57,4 +57,43 @@
   .btn {
     margin: 60px auto 0;
   }
+
+  @include respond-to(lg-down) {
+    &:after {
+      right: 110px;
+      width: 35px;
+      background-size: contain;
+    }
+
+    h2 {
+      font-size: 38px;
+    }
+  }
+  
+  @include respond-to(md-down) {
+    h2 {
+      font-size: 34px;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    margin-top: 45px;
+  }
+  
+  @include respond-to(xs) {
+    &:before {
+      top: 60px;
+      left: -10px;  
+      width: 60px;
+      background-size: contain;
+    }
+
+    &:after {
+      display: none;
+    }
+    
+    h2 {
+      font-size: 32px;
+    }
+  }
 }

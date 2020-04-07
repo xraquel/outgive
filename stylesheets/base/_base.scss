@@ -85,6 +85,12 @@ input[type="text"] {
       border-color: $white;
     }
   }
+
+  @include respond-to(sm-down) {
+    &-secondary {
+      font-size: 12px;
+    }
+  }
 }
 
 [data-toggle="collapse"] {

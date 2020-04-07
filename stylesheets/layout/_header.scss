@@ -12,6 +12,11 @@
     padding: 0 13px;
     margin-right: 0;
 
+    img {
+      width: 100%;
+      max-width: 192px;
+    }
+
     @include transition(width 0.3s ease);
   }
 
@@ -93,6 +98,7 @@
     .navbar-brand {
       padding: 0;
       margin: 0;
+      margin-left: 20px;
     }
 
     &.sticky-top {
@@ -116,6 +122,16 @@
       .nav-link {
         padding: 8px 0;
         text-align: center;
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .navbar-brand {
+      margin-left: 0;
+
+      img {
+        max-width: 165px;
       }
     }
   }

@@ -162,4 +162,123 @@
       max-width: 1185px;
     }
   }
+  
+  @media (min-width: 1200px) and (max-width: 1360px) {
+    .mission-holder.container {
+      max-width: calc(100% - 60px);
+    }
+  }
+
+  @include respond-to(lg-down) {
+    padding-bottom: 120px;
+
+    .mission-holder {
+      margin-bottom: 40px;
+
+      &.container {
+        max-width: 96%;
+
+        &.right {
+          .mission-content {
+            padding-right: 40px;
+          }
+
+          .mission-image:before {
+            bottom: -55px;
+          }
+
+          &:nth-of-type(4) {
+            margin-bottom: 130px;
+          }
+        }
+
+        &.left .mission-content {
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+
+  @include respond-to(md-down) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    .small-title {
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      margin-bottom: 5px;
+    }
+  }
+
+  @include respond-to(md) {
+    .mission-holder {
+      &.container.right {
+        &:nth-of-type(4) {
+          margin-bottom: 9%;
+        }
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .mission-holder .small-title {
+      line-height: 20px;
+    }
+    
+    .mission-holder.container {
+      margin-bottom: 90px;
+
+      &.left {
+        .mission-content {
+          padding-left: 45px;
+
+          order: -1;
+        }
+
+        .mission-image:before {
+          bottom: -60px;
+        }
+
+        &:nth-of-type(5):after {
+          width: 30px;
+          background-size: contain;
+        }
+      }
+
+      &.right {
+        .mission-content {
+          padding-right: 25px;
+        }
+
+        .mission-image:after {
+          width: 30px;
+          background-size: contain;
+        }
+
+        .mission-image:before {
+          bottom: -60px;
+        }
+
+        &:nth-of-type(4) .mission-image:after {
+          background-size: contain;
+          right: 75.5%;
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    padding-bottom: 45px;
+
+    .mission-holder.container {
+      &.left {
+        .mission-content {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
 }

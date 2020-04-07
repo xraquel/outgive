@@ -46,7 +46,6 @@ p {
   font-weight: 400;
   font-size: 18px;
   line-height: 29px;
-  text-align: justify;
 }
 
 .small-title {
@@ -60,7 +59,38 @@ p {
   color: $yellow;
 }
 
-.font-bold {
+.font-bold,
+strong,
+p > strong {
   font-weight: 600;
   color: $black;
+}
+
+@include respond-to(lg-down) {
+  h2 {
+    font-size: 36px;
+    line-height: 1.5;
+  }
+}
+
+@include respond-to(md-down) {
+  h2 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@include respond-to(sm-down) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@include respond-to(xs) {
+  h2 {
+    font-size: 28px;
+  }
 }

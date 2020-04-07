@@ -6,6 +6,7 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+    max-width: 320px;
 
     img {
       margin-right: 20px;
@@ -75,5 +76,41 @@ footer {
     text-transform: capitalize;
     text-align: right;
     color: $light-gray;
+  }
+
+  @include respond-to(md-down) {
+    padding: 50px 0 40px;
+
+    .container {
+      max-width: 97%;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .container {
+      max-width: 100%;
+    }
+
+    .company-address {
+      margin: 0 auto 20px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    .social-media-links,
+    .footer-links {
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+
+    .footer-links .list-inline-item:not(:last-child) {
+      margin-right: 9%;
+    }
+
+    .copyright-text {
+      text-align: center;
+    }
   }
 }

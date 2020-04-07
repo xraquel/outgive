@@ -85,4 +85,65 @@
       color: rgba($wild-sand, .5);
     }
   }
+
+  @include respond-to(lg-down) {
+    .team-holder {
+      .team-image img {
+        max-width: 170px;
+      }
+    }
+  }
+
+  @include respond-to(md-down) {
+    .small-title {
+      margin-bottom: 8px;
+    }
+    
+    .team-content p {
+      width: 100%;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    padding-bottom: 75px;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    .team-holder {
+      margin-top: 35px;
+
+      .team-image {
+        margin-bottom: 20px;
+  
+        img {
+          max-width: 135px;
+        }
+      }
+
+      .team-name {
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .team-position {
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .team-holder .team-image img {
+      max-width: 120px;
+    }
+
+    .team-content p {
+      width: 90%;
+    }
+  }
 }

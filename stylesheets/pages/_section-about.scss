@@ -19,24 +19,58 @@
     margin-bottom: 32px;
   }
 
-  .about-text {
+  p {
     margin-bottom: 30px;
     color: $text-color;
   }
 
-  .col {
-    &-first {
-      padding-right: 45px;
-    }
-
-    &-second {
-      padding-left: 45px;
-    }
+  .col-first {
+    columns: 2;
+    column-gap: 70px;
   }
 
   @include respond-to(xl) {
     .container {
       max-width: 1185px;
+    }
+  }
+
+  @include respond-to(lg-down) {
+    padding-top: 65px;
+    padding-bottom: 60px;
+  }
+  
+  @include respond-to(md-down) {
+    .container {
+      max-width: 90%;
+    }
+
+    .about-title {
+      margin-bottom: 15px;
+    }
+
+    .col-first {
+      columns: 1;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .container {
+      max-width: 85%;
+    }
+  }
+
+  @include respond-to(xs) {
+    padding-bottom: 25px;
+
+    &:after {
+      bottom: -25px;
+      width: 35px;
+      background-size: contain;
+    }
+
+    .container {
+      max-width: 90%;
     }
   }
 }

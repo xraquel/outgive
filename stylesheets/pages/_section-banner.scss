@@ -24,7 +24,7 @@
       margin-bottom: 12px;
     }
 
-    &-description {
+    &-content p {
       margin-bottom: 40px;
       font-size: 16px;
       font-weight: 300;
@@ -54,7 +54,7 @@
       margin-bottom: 30px;
     }
 
-    .banner-description {
+    .banner-content p {
       margin-bottom: 20px;
     }
   }
@@ -66,7 +66,7 @@
       font-size: 40px;
     }
 
-    .banner-description {
+    .banner-content p {
       font-size: 14px;
       line-height: 25px;
     }
@@ -79,17 +79,17 @@
 
     background-size: cover;
 
-    .banner-description {
+    .banner-content p {
       color: $white;
     }
   }
 
   @include respond-to(xs) {
-    height: calc(100vh - 70px);
+    height: calc(90vh - 70px);
 
     .banner {
       &-content,
-      &-description {
+      &-content p {
         padding: 0;
 
         text-align: center;
@@ -110,7 +110,7 @@
   }
 
   @media screen and (max-width: 350px) {
-    .banner-description {
+    .banner-content p {
       br {
         display: none;
       }
